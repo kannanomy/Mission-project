@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage ('run as cont') {
+        stage ('run as con') {
             steps{
                 sh 'docker run -d -p 80:8080 --name bgcon kannan65629/bg'
             }
