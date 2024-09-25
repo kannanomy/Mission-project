@@ -21,7 +21,7 @@ pipeline {
         }
         stage ('build docker image') {
         steps{
-              sh 'docker build -t kannan65629/bg. '
+              sh 'docker build -t kannan65629/bg .'
             }
         }
         stage ('docker images push') {
