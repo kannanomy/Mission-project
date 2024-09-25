@@ -25,8 +25,11 @@ pipeline {
             }
         }
         stage ('docker images push') {
-            steps{
-                sh 'docker push kannan65629/bg'
+            
+            steps{ 
+                withDockerRegistry(credentialsId: 'docker') {
+                    sh 'docker push kannan65629/bg'
+                }
             }
         }
         stage ('run as cont') {
