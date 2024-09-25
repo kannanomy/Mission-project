@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('code package') {
             steps {
-                sh 'mvn packages'
+                sh 'mvn package'
             }
         }
         stage ('build docker image') {
