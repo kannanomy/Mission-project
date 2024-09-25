@@ -29,7 +29,7 @@ pipeline {
                 sh 'docker push kannan65629/bg'
             }
         }
-        stage ('run as con') {
+        stage ('run as cont') {
             steps{
                 sh 'docker run -d-p 80:8080 --name bgcon kannan65629/bg'
             }
